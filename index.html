@@ -2,70 +2,76 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Лунный калькулятор добычи ресурсов</title>
+  <title>Лунный калькулятор</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app-layout">
-  <!-- Левая панель: ссылка на GitHub -->
-  <aside class="left-panel">
-    <div class="github-container">
-      <h3> РЕПОЗИТОРИЙ</h3>
-      <a href="https://github.com/your-moon-profile/lab1-calculator" class="github-link" target="_blank">
-        📁 GitHub проекта
-      </a>
-    </div>
-  </aside>
+  <!-- Луна в углу -->
+  <div class="moon"></div>
 
-  <!-- Центральная панель: калькулятор -->
-  <main class="center-panel">
-    <div class="calculator-container">
-      <div id="result" class="result">0</div>
-      <div class="buttons-grid">
-        <div>  
-          <button id="btn_op_clear" class="my-btn secondary">C</button>
-          <button id="btn_op_sign" class="my-btn secondary">+/-</button>
-          <button id="btn_op_percent" class="my-btn secondary">%</button>
-          <button id="btn_op_div" class="my-btn primary">/</button>
-        </div>
-        <div>
-          <button id="btn_digit_7" class="my-btn">7</button>
-          <button id="btn_digit_8" class="my-btn">8</button>
-          <button id="btn_digit_9" class="my-btn">9</button>
-          <button id="btn_op_mult" class="my-btn primary">x</button>
-        </div>
-        <div>
-          <button id="btn_digit_4" class="my-btn">4</button>
-          <button id="btn_digit_5" class="my-btn">5</button>
-          <button id="btn_digit_6" class="my-btn">6</button>
-          <button id="btn_op_minus" class="my-btn primary">-</button>
-        </div>
-        <div>
-          <button id="btn_digit_1" class="my-btn">1</button>
-          <button id="btn_digit_2" class="my-btn">2</button>
-          <button id="btn_digit_3" class="my-btn">3</button>
-          <button id="btn_op_plus" class="my-btn primary">+</button>
-        </div>
-        <div>
-          <button id="btn_digit_0" class="my-btn">0</button>
-          <button id="btn_digit_dot" class="my-btn">.</button>
-          <button id="btn_op_equal" class="my-btn primary execute">=</button>
+  <div class="app-layout">
+    <aside class="left-panel">
+      <div class="github-container">
+        <h3> РЕПОЗИТОРИЙ</h3>
+        <a href="https://github.com/Korsar21/Programming-network-applications" class="github-link" target="_blank">
+          📁 GitHub проекта
+        </a>
+      </div>
+    </aside>
+
+    <main class="center-panel">
+      <div class="calculator-container">
+        <!-- Декоративные элементы хай-тек -->
+        <div class="corner-tl"></div>
+        <div class="corner-br"></div>
+        <div class="top-line"></div>
+        <div class="bottom-line"></div>
+
+        <div id="result" class="result">0</div>
+        <div class="buttons-grid">
+          <div>  
+            <button id="btn_op_clear" class="my-btn secondary">C</button>
+            <button id="btn_op_sign" class="my-btn secondary">+/-</button>
+            <button id="btn_op_percent" class="my-btn secondary">%</button>
+            <button id="btn_op_div" class="my-btn primary">/</button>
+          </div>
+          <div>
+            <button id="btn_digit_7" class="my-btn">7</button>
+            <button id="btn_digit_8" class="my-btn">8</button>
+            <button id="btn_digit_9" class="my-btn">9</button>
+            <button id="btn_op_mult" class="my-btn primary">x</button>
+          </div>
+          <div>
+            <button id="btn_digit_4" class="my-btn">4</button>
+            <button id="btn_digit_5" class="my-btn">5</button>
+            <button id="btn_digit_6" class="my-btn">6</button>
+            <button id="btn_op_minus" class="my-btn primary">-</button>
+          </div>
+          <div>
+            <button id="btn_digit_1" class="my-btn">1</button>
+            <button id="btn_digit_2" class="my-btn">2</button>
+            <button id="btn_digit_3" class="my-btn">3</button>
+            <button id="btn_op_plus" class="my-btn primary">+</button>
+          </div>
+          <div>
+            <button id="btn_digit_0" class="my-btn">0</button>
+            <button id="btn_digit_dot" class="my-btn">.</button>
+            <button id="btn_op_equal" class="my-btn primary execute">=</button>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <!-- Правая панель: имя и группа -->
-  <aside class="right-panel">
-    <div class="student-container">
-      <h3>Выполнил</h3>
-      <div class="student-info">
-        <span>Имя: Артём Косарев</span>
-        <span>Группа: ИУ5-43Б</span>
+    <aside class="right-panel">
+      <div class="student-container">
+        <h3>ВЫПОЛНИЛ</h3>
+        <div class="student-info">
+          <span>Имя: Артём Косарев</span>
+          <span>Группа: ИУ5-43Б</span>
+        </div>
       </div>
-    </div>
-  </aside>
-</div>
-<script src="script.js"></script>
+    </aside>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
