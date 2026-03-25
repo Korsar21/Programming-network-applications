@@ -1,0 +1,231 @@
+/* Общие сбросы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at 20% 30%, #0a0f1a, #03060c);
+  font-family: 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Трёхколоночная раскладка */
+.app-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Левая и правая панели — фиксированная ширина, центрирование по вертикали */
+.left-panel,
+.right-panel {
+  flex: 0 0 220px;
+  max-width: 220px;
+}
+
+/* Центральная панель — калькулятор, компактная ширина */
+.center-panel {
+  flex: 0 0 auto;
+}
+
+/* Контейнер калькулятора — подогнан под кнопки, без лишней ширины */
+.calculator-container {
+  background: rgba(20, 28, 40, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: 42px;
+  padding: 1.5rem;
+  border: 1px solid rgba(245, 176, 66, 0.3);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  width: 100%;
+}
+
+/* Сетка кнопок — каждая строка flex, чтобы кнопки шли в ряд */
+.buttons-grid > div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+/* Базовая кнопка */
+.my-btn {
+  margin-right: 5px;
+  margin-top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #2c3e4e;
+  color: #f0f3f8;
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', 'Arial', monospace;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Убираем правый отступ у последней кнопки в ряду */
+.buttons-grid > div > button:last-child {
+  margin-right: 0;
+}
+
+.my-btn:hover {
+  background: #3e5a6b;
+  transform: scale(0.97);
+}
+
+.my-btn:active {
+  filter: brightness(130%);
+}
+
+.my-btn.secondary {
+  background: #4a5b6e;
+}
+
+.my-btn.secondary:hover {
+  background: #5f738a;
+}
+
+.my-btn.primary {
+  background: #e67e22;
+  color: white;
+}
+
+.my-btn.primary:hover {
+  background: #f39c12;
+}
+
+.my-btn.execute {
+  width: 110px;
+  border-radius: 34px;
+  background: #e67e22;
+}
+
+.my-btn.execute:hover {
+  background: #f39c12;
+}
+
+/* Экран калькулятора */
+.result {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  background: #0b1018;
+  text-align: right;
+  color: #f5b042;
+  font-size: 2.2rem;
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  letter-spacing: 2px;
+  border: 1px solid #3e5a6b;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.05);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Стили для левой и правой панелей (оформление блоков) */
+.github-container, .student-container {
+  background: rgba(10, 15, 26, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 28px;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(245, 176, 66, 0.35);
+  transition: 0.2s;
+}
+
+.github-container h3, .student-container h3 {
+  font-size: 0.9rem;
+  color: #e0aa6e;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+  border-left: 3px solid #e67e22;
+  padding-left: 10px;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e6;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 0.95rem;
+  background: #1e2a36;
+  padding: 6px 14px;
+  border-radius: 40px;
+  transition: 0.2s;
+}
+
+.github-link:hover {
+  background: #e67e22;
+  color: #0a0f1a;
+  transform: translateY(-2px);
+}
+
+.student-info {
+  color: #cfdee9;
+  font-size: 0.95rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-info span {
+  background: #1e2a36;
+  padding: 4px 12px;
+  border-radius: 24px;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* Адаптивность для узких экранов */
+@media (max-width: 800px) {
+  .app-layout {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .left-panel, .right-panel {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 320px;
+  }
+  .center-panel {
+    order: -1; /* калькулятор сверху на мобильных */
+  }
+}
+
+@media (max-width: 500px) {
+  .my-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+  .my-btn.execute {
+    width: 94px;
+  }
+  .result {
+    font-size: 1.6rem;
+    height: 60px;
+  }
+  .calculator-container {
+    padding: 1rem;
+  }
+  body {
+    padding: 1rem;
+  }
+}
