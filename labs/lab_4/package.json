@@ -1,0 +1,19 @@
+{
+  "name": "lab_4_moon_reports_api",
+  "version": "1.0.0",
+  "description": "API для отчетов по добыче ресурсов на Луне",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "keywords": []
+}

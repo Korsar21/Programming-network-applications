@@ -1,0 +1,152 @@
+{
+  "info": {
+    "name": "Moon Reports API",
+    "_postman_id": "f3f1f7b0-5a8b-4b77-9b0e-111111111111",
+    "description": "Коллекция запросов для лабораторной работы 4 по Node.js API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET /",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "GET /reports",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/reports",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["reports"]
+        }
+      }
+    },
+    {
+      "name": "GET /reports with filter category=oxygen",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/reports?category=oxygen",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["reports"],
+          "query": [
+            {
+              "key": "category",
+              "value": "oxygen"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /reports with filter status=Новый",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/reports?status=Новый",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["reports"],
+          "query": [
+            {
+              "key": "status",
+              "value": "Новый"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "GET /reports/1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/reports/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["reports", "1"]
+        }
+      }
+    },
+    {
+      "name": "POST /reports",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Отчёт: добыча кремния\",\n  \"category\": \"metal\",\n  \"status\": \"Новый\",\n  \"period\": \"IV квартал 2035\",\n  \"summary\": \"Исследование перспектив выделения кремния из реголита для производства электроники.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/reports",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["reports"]
+        }
+      }
+    },
+    {
+      "name": "PATCH /reports/2",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"Обновлено\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/reports/2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["reports", "2"]
+        }
+      }
+    },
+    {
+      "name": "DELETE /reports/4",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/reports/4",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["reports", "4"]
+        }
+      }
+    }
+  ]
+}
