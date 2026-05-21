@@ -1,6 +1,6 @@
 
 
-```markdown
+
 # Лабораторная работа №6. Moon Reports Frontend (fetch + async/await + Bundler)
 
 ## Оглавление
