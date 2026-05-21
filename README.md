@@ -164,7 +164,7 @@ npm run dev
 ## 5. Скриншоты работающего приложения
 
 
-![Главная страница](./screenshots/home.png)
+![Главная страница](screenshots\home.png)
 
 
 
